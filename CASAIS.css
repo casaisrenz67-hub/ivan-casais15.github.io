@@ -1,0 +1,228 @@
+:root {
+  --accent: #ffcc00;       /* bright yellow */
+  --muted: #bbbbbb;        /* soft gray for secondary text */
+  --bg: #000000;           /* pure black background */
+  --card-bg: #111111;      /* dark gray card background */
+  --text: #ffffff;         /* white text for readability */
+  --hover-bg: #ffcc00;     /* yellow hover background */
+  --hover-text: #000000;   /* black text on hover */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.wrap {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  background: var(--accent);
+  color: var(--bg);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  margin-left: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: var(--hover-bg);
+  color: var(--hover-text);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+  margin-bottom: 18px;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.intro {
+  flex: 2;
+}
+
+.profile {
+  flex: 1;
+  text-align: center;
+}
+
+.avatar {
+  background: #333;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.small {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.accent {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.availability {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--hover-text);
+}
+
+.btn-primary:hover {
+  background: var(--text);
+  color: var(--hover-text);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn-ghost:hover {
+  background: var(--accent);
+  color: var(--hover-text);
+  border-color: var(--accent);
+}
+
+.projects {
+  display: grid;
+  gap: 12px;
+}
+
+.project .thumb {
+  background: var(--accent);
+  color: var(--hover-text);
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skill-item {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.8s ease;
+}
+
+.skill-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.progress {
+  background: #333;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.progress-bar {
+  background: var(--accent);
+  height: 100%;
+  width: 0;
+  border-radius: 6px;
+  transition: width 1s ease;
+}
+
+.skill-item.visible .progress-bar {
+  width: var(--percent);
+}
+
+.cta-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.cta-link:hover {
+  color: var(--hover-text);
+  background: var(--accent);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--muted);
+}

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Renz Ivan M. Casais — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Renz Ivan M. Casais — web developer and student." />
+  <link rel="stylesheet" href="CASAIS.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">RC</div>
+        <div>
+          <div style="font-weight:700">Renz Ivan M. Casais</div>
+          <div class="subtitle">Web Developer · Student · Anime fan</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card intro">
+        <h1>Hello — I'm <span class="accent">RENZ</span></h1>
+        <p>I build web apps, prototypes, and clean UI/UX experiments. Currently learning Figma interactive video playback and building small projects to improve my skills.</p>
+
+        <div class="cta">
+         <a class="btn btn-primary" href="https://renz123.my.canva.site/" target="_blank">View Projects</a>
+
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+
+        <div class="availability">Available for freelance & student projects · Night shift friendly</div>
+      </div>
+
+      <aside class="card profile">
+          <img src="MY.jpg" alt="s" 
+         style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+        <div>
+          <div class="name">Renz Ivan M. Casais</div>
+          <div class="small">Apr 15, 2004 · 21 years old</div>
+        </div>
+        <div class="small">Mobile Legend · Loves road trips & anime</div>
+      </aside>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p class="muted">I'm a Computer Science student who enjoys building web projects, learning UI/UX, and creating interactive prototypes. I code in Python, Java, C++, HTML, CSS, and Assembly. I also like going on road trips and working out.</p>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+    <div class="projects">
+    <article class="card project">
+      <div class="thumb">Cisco</div>
+ 
+      <h3>Cisco Packet Tracer Project</h3>
+      <p>Designed and configured a network simulation using Cisco Packet Tracer, demonstrating LAN setup, IP addressing, and router configuration skills.</p>
+    </article>
+
+        <article class="card project">
+          <div class="thumb">Figma Proto</div>
+          <h3>Interactive Video Prototype</h3>
+          <p>Figma prototype simulating video playback using frame sequences and custom controls.</p>
+        </article>
+
+        <article class="card project">
+          <div class="thumb">Portfolio</div>
+          <h3>This Portfolio</h3>
+          <p>Single-file HTML/CSS portfolio template—clean, responsive, and easy to customize.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill-item" style="--percent:90%">
+          <div class="skill-label"><span>HTML & CSS</span><span>90%</span></div>
+          <div class="progress"><div class="progress-bar"></div></div>
+        </div>
+
+        <div class="skill-item" style="--percent:75%">
+          <div class="skill-label"><span>JavaScript (Basics)</span><span>75%</span></div>
+          <div class="progress"><div class="progress-bar"></div></div>
+        </div>
+
+        <div class="skill-item" style="--percent:85%">
+          <div class="skill-label"><span>Python</span><span>85%</span></div>
+          <div class="progress"><div class="progress-bar"></div></div>
+        </div>
+
+        <div class="skill-item" style="--percent:80%">
+          <div class="skill-label"><span>C++</span><span>80%</span></div>
+          <div class="progress"><div class="progress-bar"></div></div>
+        </div>
+
+        <div class="skill-item" style="--percent:70%">
+          <div class="skill-label"><span>Assembly</span><span>70%</span></div>
+          <div class="progress"><div class="progress-bar"></div></div>
+        </div>
+
+        <div class="skill-item" style="--percent:88%">
+          <div class="skill-label"><span>Figma</span><span>88%</span></div>
+          <div class="progress"><div class="progress-bar"></div></div>
+        </div>
+      </div>
+    </section>
+
+  
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p class="muted">Email: <a href="mailto:casaisrenz67@gmail.com" class="cta-link">casaisrenz67@gmail.com</a></p>
+ <p class="muted">FACEBOOK: <a href="https://www.facebook.com/renzcasais21" class="cta-link">RENZ CASAIS</a></p>
+
+    </section>
+
+    <footer>
+      <div>Made with ❤️ · Casais</div>
+    </footer>
+  </div>
+
+  <script>
+    // Animate progress bars when visible
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('.skill-item').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
